@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js获取浏览器版本</title>
+	<style>
+	#print{
+		width: 120px;
+		height: 42px;
+		border-radius: 2px;
+		border: 1px solid #3385FF;
+		color: #fff;
+		background: #3385FF;
+		font-size: 14px;
+		font-weight: bold;
+		font-family: "Micsoft Yahei";
+	}
+	</style>
+</head>
+<body>
+	<div>
+	当前浏览器:
+		<span  id="browser"></span><br>
+		<button id="print">点击打印本页</button>
+	</div>
+	<script>
+	var	browser=document.getElementById('browser');
+	browser.innerHTML=window.navigator.userAgent;
+	
+	var butprint=document.getElementById('print');
+	butprint.onclick=function(){
+		window.print();
+	}
+	</script>
+</body>
+</html>
